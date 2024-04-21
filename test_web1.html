@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minh vs Hai Counter</title>
+  <style>
+    body { font-family: sans-serif; }
+    .container { display: flex; justify-content: space-around; }
+    .player { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Minh vs Hai Leaderboard</h1>
+  <div class="container">
+    <div class="player">
+      <h2>Minh</h2>
+      <p id="minh-count">0</p>
+      <button onclick="increment('minh')">+</button>
+      <button onclick="decrement('minh')">-</button>
+    </div>
+    <div class="player">
+      <h2>Hai</h2>
+      <p id="hai-count">0</p>
+      <button onclick="increment('hai')">+</button>
+      <button onclick="decrement('hai')">-</button>
+    </div>
+  </div>
+
+  <script>
+    // Initialize counts (replace with actual logic to load daily counts)
+    let minhCount = 0;
+    let haiCount = 0;
+
+    function increment(player) {
+      if (player === 'minh') {
+        minhCount++;
+        document.getElementById('minh-count').textContent = minhCount;
+      } else {
+        haiCount++;
+        document.getElementById('hai-count').textContent = haiCount;
+      }
+      // Add logic to save daily counts (e.g., using localStorage)
+    }
+
+    function decrement(player) {
+      if (player === 'minh') {
+        minhCount--;
+        document.getElementById('minh-count').textContent = minhCount;
+      } else {
+        haiCount--;
+        document.getElementById('hai-count').textContent = haiCount;
+      }
+      // Add logic to save daily counts
+    }
+
+    // Add logic to display leaderboard based on daily counts
+  </script>
+</body>
+</html>
